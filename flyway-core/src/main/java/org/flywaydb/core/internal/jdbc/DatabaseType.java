@@ -101,7 +101,12 @@ public enum DatabaseType {
     /**
      * SAP HANA.
      */
-    SAPHANA(Types.VARCHAR);
+    SAPHANA(Types.VARCHAR),
+
+    /**
+     * CovenantSQL.
+     */
+    COVENANTSQL(Types.VARCHAR);
 
     private final int nullType;
 
@@ -164,6 +169,9 @@ public enum DatabaseType {
         }
         if (databaseProductName.startsWith("Informix")) {
             return INFORMIX;
+        }
+        if (databaseProductName.startsWith("CovenantSQL")) {
+            return COVENANTSQL;
         }
         throw new FlywayException("Unsupported Database: " + databaseProductName);
     }

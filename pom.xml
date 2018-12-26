@@ -15,8 +15,7 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <!--
     Detailed information how to contribute: https://flywaydb.org/documentation/contribute/code/
 
@@ -29,7 +28,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.flywaydb</groupId>
     <artifactId>flyway-parent</artifactId>
-    <version>0-SNAPSHOT</version>
+    <version>5.2.4-covenantsql</version>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
     <description>Flyway: Database Migrations Made Easy.</description>
@@ -44,8 +43,8 @@
     <scm>
 
         <url>https://github.com/flyway/flyway</url>
-        <connection>scm:git:https://github.com/flyway/flyway.git</connection>
-        <developerConnection>scm:git:https://github.com/flyway/flyway.git</developerConnection>
+        <connection>scm:git:https://github.com/CovenantSQL/flyway.git</connection>
+        <developerConnection>scm:git:https://github.com/CovenantSQL/flyway.git</developerConnection>
 
 
 
@@ -58,6 +57,10 @@
         <developer>
             <id>axel</id>
             <name>Axel Fontaine</name>
+        </developer>
+        <developer>
+            <id>xq262144</id>
+            <name>Qi Xiao</name>
         </developer>
     </developers>
 
@@ -75,27 +78,6 @@
 
 
     </modules>
-
-    <distributionManagement>
-
-        <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Nexus Release Repository</name>
-            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-
-
-
-
-
-
-
-    </distributionManagement>
 
     <repositories>
         <repository>
@@ -498,7 +480,6 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <release>8</release>
                     <source>1.8</source>
                     <target>1.8</target>
                     <encoding>UTF-8</encoding>

@@ -21,6 +21,7 @@ import org.flywaydb.core.api.logging.Log;
 import org.flywaydb.core.api.logging.LogFactory;
 import org.flywaydb.core.internal.database.base.Database;
 import org.flywaydb.core.internal.database.cockroachdb.CockroachDBDatabase;
+import org.flywaydb.core.internal.database.covenantsql.CovenantDatabase;
 import org.flywaydb.core.internal.database.db2.DB2Database;
 import org.flywaydb.core.internal.database.derby.DerbyDatabase;
 import org.flywaydb.core.internal.database.h2.H2Database;
@@ -201,6 +202,11 @@ public class DatabaseFactory {
             case SYBASEASE_JTDS:
                 return new SybaseASEDatabase(configuration, connection, originalAutoCommit
 
+
+
+                );
+            case COVENANTSQL:
+                return new CovenantDatabase(configuration, connection, originalAutoCommit
 
 
                 );
